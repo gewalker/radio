@@ -10,12 +10,13 @@ import subprocess
 import time
 import pickle
 import os
+from sys import argv 
 
 api = Mobileclient()
 
 def musiclogin(api):
     try:
-        logged_in = api.login('gewalker@gmail.com', 'hxmagrykhknetdlf', '0101010101010101')
+        logged_in = api.login(argv[1], argv[2], '0101010101010101')
     except gmusicapi.exceptions.AlreadyLoggedIn:
         pass
 
